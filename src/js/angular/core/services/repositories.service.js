@@ -24,7 +24,7 @@ repositories.service('$repositories', ['$http', 'toastr', '$rootScope', '$timeou
         this.location = '';
         this.locationError = '';
         this.loading = true;
-        this.repository = localStorage.getItem(this.repositoryStorageName);
+        this.repository = "KWG";
         this.locations = [];
         this.repositories = [];
         this.locationsShouldReload = false;
