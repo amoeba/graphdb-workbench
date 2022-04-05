@@ -88,6 +88,14 @@ const moduleDefinition = function (productInfo) {
             let mainMenu = PluginRegistry.get('main.menu');
             mainMenu.forEach(function (menu) {
                 menu.items.forEach(function (item) {
+                    if (item.label === "Setup" || (item.parent && item.parent === "Setup")) {
+                        return;
+                    }
+
+                    if (item.label === "Import" || (item.parent && item.parent === "Import")) {
+                        return;
+                    }
+
                     $menuItemsProvider.addItem(item);
                 });
             });
