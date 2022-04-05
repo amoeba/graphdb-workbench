@@ -119,9 +119,9 @@ const moduleDefinition = function (productInfo) {
     workbench.run(['$rootScope', '$route', 'toastr', '$sce', function ($rootScope, $route, toastr, $sce) {
         $rootScope.$on('$routeChangeSuccess', function () {
             if ($route.current.title) {
-                document.title = $route.current.title + ' | GraphDB Workbench';
+                document.title = $route.current.title + ' | KnowWhereGraph GraphDB Workbench';
             } else {
-                document.title = 'GraphDB Workbench';
+                document.title = 'KnowWhereGraph GraphDB Workbench';
             }
             $rootScope.helpInfo = $sce.trustAsHtml($route.current.helpInfo);
             $rootScope.title = $route.current.title;
